@@ -3,7 +3,7 @@ const nextConfig = {
     "output": "export",
     images: {
         loader: 'custom',
-        loaderFile: './loader.js',
+        loaderFile: 'https://chuliying.github.io/nextjs-blog/loader.js',
       },
 }
 
