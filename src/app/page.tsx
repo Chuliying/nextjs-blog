@@ -6,12 +6,12 @@ type SixGoals = {
 };
 
 const goals: SixGoals[] = [
-  { imgUrl: `/goals-1.svg`, name: "天使圓夢計畫" },
-  { imgUrl: `/goals-2.svg`, name: "天使圓夢計畫" },
-  { imgUrl: `/goals-3.svg`, name: "天使圓夢計畫" },
-  { imgUrl: `/goals-4.svg`, name: "天使圓夢計畫" },
-  { imgUrl: `/goals-5.svg`, name: "天使圓夢計畫" },
-  { imgUrl: `/goals-6.svg`, name: "天使圓夢計畫" },
+  { imgUrl: `./goals-1.svg`, name: "天使圓夢計畫" },
+  { imgUrl: `./goals-2.svg`, name: "天使圓夢計畫" },
+  { imgUrl: `./goals-3.svg`, name: "天使圓夢計畫" },
+  { imgUrl: `./goals-4.svg`, name: "天使圓夢計畫" },
+  { imgUrl: `./goals-5.svg`, name: "天使圓夢計畫" },
+  { imgUrl: `./goals-6.svg`, name: "天使圓夢計畫" },
 ];
 
 export default function Home() {
