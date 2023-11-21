@@ -1,17 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     "output": "export",
-    basePath: '/nextjs-blog',
-    async redirects() {
+    async rewrites() {
         return [
-            {
-                source: '/',
-                destination: '/nextjs-blog',
-                basePath: false,
-                permanent: false
-            }
+          {
+            source: '/',
+            destination: '/nextjs-blog/',
+          },
         ]
-    }
+      },
 }
 
 module.exports = nextConfig
