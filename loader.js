@@ -1,5 +1,5 @@
 'use client'
  
-export default function myImageLoader({ src, width, quality }) {
+export default function myImageLoader(src) {
   return `https://chuliying.github.io/nextjs-blog/${src}}`
 }
