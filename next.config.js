@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     "output": "export",
-    async rewrites() {
-        return [
-          {
-            source: '/',
-            destination: '/nextjs-blog/',
-          },
-        ]
+    images: {
+        loader: 'custom',
+        loaderFile: './loader.js',
       },
 }
 
