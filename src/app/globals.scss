@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
+// variables
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --theme-color: #e62770;
+  --font-color: rgba(0, 0, 0, 0.87);
+  --grey-color: #f2f2f2;
+  --spacing: 8px;
+}
+
+$small-screen-min-width: em(320px) !default;
+$small-screen-max-width: em(767px) !default;
+$medium-screen-min-width: em(768px) !default;
+$medium-screen-max-width: em(1024px) !default;
+$large-screen-min-width: em(1025px) !default;
+
+$screen: "only screen" !default;
+$small: "only screen and (min-width:#{$small-screen-min-width}) and (max-width:#{$small-screen-max-width})" !default;
+$medium: "only screen and (min-width:#{$medium-screen-min-width}) and (max-width:#{$medium-screen-max-width})" !default;
+$large: "only screen and (min-width:#{$large-screen-min-width})" !default;
+$landscape: " and (orientation: landscape)" !default;
+$portrait: " and (orientation: portrait)" !default;
+
+@function spacing($num) {
+  @return $num * 8px;
+}
+
+body {
+  background: var(--grey-color);
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  p {
+    font-size: 17px;
+    line-height: 1.65em;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 1.35em;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.35em;
+    letter-spacing: 1px;
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 1.35em;
+    letter-spacing: 0.5px;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: spacing(2);
+  z-index: 100;
+  display: flex;
+  border-bottom: solid 1px var(--theme-color);
+
+  .logo {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    div {
+      text-align: center;
+      margin: 0 spacing(2);
+      p {
+        color: var(--theme-color);
+      }
+    }
+  }
+}
+
+footer {
+  background-color: var(--theme-color);
+  padding: spacing(8);
+  color: #fff;
+
+  h3 {
+    margin-bottom: spacing(3);
+  }
+
+  p {
+    margin-bottom: spacing(1);
+  }
+
+  .social__box {
+    margin-top: spacing(4);
+    div {
+      display: inline-block;
+      padding: spacing(1);
+      margin-right: spacing(1);
+      height: 42px;
+      width: 42px;
+      background: #fff;
+      color: var(--theme-color);
+      text-align: center;
+      border-radius: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .flex {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+// common
+
+.main__container {
+  padding: spacing(2);
+  width: 100%;
+  background-color: #fff;
+  .grid {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main__container--dark {
+  background-color: var(--grey-color);
+}
+
+.main__button {
+  border-radius: 24px;
+  background: var(--theme-color);
+  color: #fff;
+  padding: spacing(2) spacing(4);
+}
+
+.action__button-white {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: spacing(4);
+  margin: 0 spacing(2);
+  vertical-align: middle;
+  img {
+    width: 46px;
+    display: inline-block;
+    margin-left: spacing(6);
+  }
+}
+
+.center__box {
+  text-align: center;
+  padding: spacing(10) 0;
+  max-width: 800px;
+  margin: auto;
+  h1 {
+    border-bottom: solid 3px var(--theme-color);
+    display: inline-block;
+    margin: auto;
+    padding-bottom: spacing(2);
+    margin-bottom: spacing(7);
+  }
+  p {
+    text-align: left;
+  }
+}
+
+// index
+
+.KV__block {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  // background-image: url("https://mealsforall.com/wp-content/uploads/layerslider/LayerSlider-5-responsive-demo-slider/bg6b.jpg");
+  background-size: 100%;
+  background-color: #a2a2a2;
+}
+
+// components
+
+.CTA {
+  padding: spacing(6) spacing(2);
+  width: 100%;
+  background: var(--theme-color);
+  color: #fff;
+  h3,
+  h1 {
+    text-align: left;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .center__box {
+    max-width: 1200px;
+  }
+}
+
+.result__container {
+  .grid {
+    margin-bottom: spacing(10);
+    margin-top: spacing(6);
+    h3 {
+      font-weight: 700;
+    }
+    h1 {
+      color: var(--theme-color);
+      font-size: 56px;
+      padding-top: spacing(3);
+      font-weight: 700;
+    }
+  }
+}
